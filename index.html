@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HW#6 - Nikita Chkhaidze</title>
+    <link rel='stylesheet' href='style.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <script type='module' src="./script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="list">
+            <div class="list__header">
+                <h1>To do list</h1>
+            </div>
+            <div class="list__form">
+                <div class="list__input">
+                    <label for="task-description">
+                        Describe task:
+                        <input type="text" id='task-description'>
+                    </label>
+                </div>
+                <div class="list__input">
+                    <label for="deadline">
+                        Enter deadline:
+                        <input type="datetime-local" id='deadline'>
+                    </label>
+                </div>
+                <button id='addTodo'>Add todo</button>
+                <div class="list__filters">
+                    <div class="list__filter-area">
+                        <label for="filter-complete">Filter by completeness:
+                            <select id='filter-complete'>
+                                <option value='none' selected='selected'>None</option>
+                                <option value='complete'>Only complete tasks</option>
+                                <option value='incomplete'>Only incomplete tasks</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="list__filter-area">
+                        <label for="filter-deadline">Filter by deadline:
+                            <input type="datetime-local" id='filter-deadline'>
+                        </label>
+                    </div>
+                    <button id='filter-button'>Filter</button>
+                    <button id='unfilter-button'>Cancel filters</button>
+                </div>
+            </div>
+            <div class="list__content">
+                <ul id='todoList'></ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
